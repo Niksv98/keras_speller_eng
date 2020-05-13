@@ -12,28 +12,3 @@ Decoded sentence:
 Target sentence:
 > The rabbit hole went straight on like a tunnel for some way and then dipped suddenly down so suddenly that Alice had not a moment to think about stopping herself before she found herself falling down a very deep well
 ```
-
-Some ideas for further improvement on speller performance:
-
-* Implement an attention mechanism
-* Incorporate beam search as part of the loss evaluation
-* Extend to high-order ngrams to capture intra-word contexts
-
-## Requirements
-The code is tested on Ubuntu 16.04 with the following components:
-
-### Software
-
-* Anaconda Python 3.6
-* Keras 2.2.4 using TensorFlow GPU 1.12.0 backend
-* CUDA 9.1 with CuDNN 7.1
-
-### Optional Hardware
-
-* Intel Xeon CPU with 32 cores
-* 64GB of system RAM
-* NVIDIA GeForce GTX TITAN X GPU with 12GB of VRAM
-
-## Acknowledgment
-
-The idea behind this project is inspired by this [blog post](https://machinelearnings.co/deep-spelling-9ffef96a24f6), with several distinct enhancements in this implementation, such as teacher forcing, that result in much faster convergence and better performance.
