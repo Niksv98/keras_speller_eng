@@ -1,5 +1,5 @@
 import os
-
+import time
 from utils import CharacterTable, transform
 from utils import restore_model, decode_sequences
 from utils import read_text, tokenize
@@ -15,6 +15,7 @@ books = ['nietzsche.txt', 'pride_and_prejudice.txt', 'shakespeare.txt', 'war_and
 test_sentence = input("\nEnter a sentence: ")
 
 if __name__ == '__main__':
+    start_time = time.time()
     text  = read_text(data_path, books)
     vocab = tokenize(text)
     vocab = list(filter(None, set(vocab)))
@@ -48,3 +49,6 @@ if __name__ == '__main__':
     print('Decoded sentence:', ' '.join([token for token in decoded_tokens]))
     print('-')
     print('Target sentence: ', ' '.join([token for token in target_tokens]))
+    elapsed_time = time.time() - start_time
+    print("Time elapsed: ")
+    print(elapsed_time)
